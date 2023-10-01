@@ -2,7 +2,7 @@ import ExpenseDate from "./ExpenseDate";
 
 export default function ExpensItem(props) {
   return (
-    <div className="flex justify-between items-center mx-24 my-5 bg-green-700 rounded-md p-2">
+    <div className="flex justify-between items-center mx-24 my-5 bg-slate-400 rounded-md p-2">
       <div className="flex-none mr-10">
         <ExpenseDate date={props.date} />
       </div>
