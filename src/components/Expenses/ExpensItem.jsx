@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function ExpensItem(props) {
   const [title, setTitle] = useState(props.title);
+  console.log("Expense Item evaluted by React");
   const clickHandler = () => {
     setTitle("Ugabuga");
   };
