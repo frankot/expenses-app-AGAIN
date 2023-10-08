@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .butt {
+  @apply rounded-lg bg-slate-300
+  }
+}
