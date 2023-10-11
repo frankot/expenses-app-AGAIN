@@ -2,25 +2,35 @@ import { useState } from "react";
 import "./newExpenseInput.css";
 
 export default function NewExpense() {
-    
-  const [title, setTitle] = useState("");
+
+  const [enteredTitle, setEnteredTitle] = useState("");
   const titleChangeHandler = (event) => {
-    setTitle(event.target.value);
+    setEnteredTitle(event.target.value);
   };
 
-  const [amount, setAmount] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState("");
   const amountChangeHandler = (event) => {
-    setAmount(event.target.value);
+    setEnteredAmount(event.target.value);
   };
 
-  const [date, setDate] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
   const dateChangeHandler = (event) => {
-    setDate(event.target.value);
+    setEnteredDate(event.target.value);
+  };
+
+  const submitHandler = (event)=> {
+    event.preventDefault();
+    const expenseData = {
+        title: enteredTitle,
+        amount: enteredAmount,
+        date: new Date(enteredDate)
+    }
+    console.log(expenseData);
   };
 
   return (
     <div className="max-w-2xl mx-auto bg-purple-400 mt-6 p-4 rounded-lg text-lg">
-      <form className="flex flex-col items-center relative">
+      <form className="flex flex-col items-center relative" onSubmit={submitHandler}>
         <div className="grid grid-cols-2 ">
           <div className="newExpenseInput">
             <label>Title</label>
