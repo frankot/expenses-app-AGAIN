@@ -23,3 +23,4 @@ export default function ExpensItem(props) {
     </Card>
   );
 }
+    
