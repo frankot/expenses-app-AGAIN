@@ -2,6 +2,6 @@
 
 @layer components {
   .card {
-    @apply rounded-lg shadow-lg;
+    @apply bg-red-600;
   }
 }

@@ -1,4 +1,6 @@
-import NewExpenseForm from "./ExpenseForm";
+import Card from "../UI/Card";
+import CardItem from "../UI/CardItem";
+import ExpenseForm from "./ExpenseForm";
 
 export default function NewExpense(props) {
   const saveExpenseDataHandller = (enteredExpenseData) => {
@@ -6,12 +8,14 @@ export default function NewExpense(props) {
       ...enteredExpenseData,
       id: Math.random().toString(),
     };
-    props.onAddExpense(expenseData)
+    props.onAddExpense(expenseData);
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-purple-400 mt-6 p-4 rounded-lg text-lg">
-      <NewExpenseForm onSaveExpenseData={saveExpenseDataHandller}/>
-    </div>
+        
+      <CardItem className=" bg-purple-400 mt-6 p-4 text-lg">
+        <ExpenseForm onSaveExpenseData={saveExpenseDataHandller} />
+      </CardItem>
+
   );
 }
