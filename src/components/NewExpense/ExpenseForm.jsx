@@ -2,7 +2,7 @@ import "./newExpenseInput.css";
 import { useState } from "react";
 
 export default function ExpenseForm(props) {
-  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState("t");
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
   };

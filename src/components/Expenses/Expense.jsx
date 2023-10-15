@@ -4,8 +4,7 @@ import ExpensItem from "./ExpensItem";
 import ExpensesFilter from "./ExpensesFilter";
 
 export default function Expense(prop) {
-  const expense = prop.expense;
-  const [filterdYear, setFilteredYear] = useState("2022");
+  const [filterdYear, setFilteredYear] = useState("2020");
   const savedYearHandler = (enteredYear) => {
     setFilteredYear(enteredYear);
     console.log(`Filtered year from expenses: ${enteredYear}`);
@@ -14,15 +13,17 @@ export default function Expense(prop) {
   return (
     <div className="">
       <ul>
-        <ExpensesFilter selected={filterdYear} onSavePickedYear={savedYearHandler} />
-        {expense.map((expenseItem) => (
-          <li key={expenseItem.id}>
-            <ExpensItem
-              title={expenseItem.title}
-              amount={expenseItem.amount}
-              date={expenseItem.date}
-            />
-          </li>
+        <ExpensesFilter
+          selected={filterdYear}
+          onSavePickedYear={savedYearHandler}
+        />
+        {prop.expense.map((expenseItem) => (
+          <ExpensItem
+            key={expenseItem.id}
+            title={expenseItem.title}
+            amount={expenseItem.amount}
+            date={expenseItem.date}
+          />
         ))}
       </ul>
     </div>
