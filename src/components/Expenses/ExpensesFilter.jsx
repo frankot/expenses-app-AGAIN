@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import CardItem from "../UI/CardItem";
 
 export default function ExpensesFilter(props) {
@@ -7,7 +7,7 @@ export default function ExpensesFilter(props) {
   };
 
   return (
-    <CardItem className="bg-yellow-800 justify-between px-24 py-2 text-lg font-bold">
+    <CardItem className="bg-zinc-500 justify-between px-24 py-2 text-lg font-bold">
       <div>
         <label>Select Year</label>
       </div>

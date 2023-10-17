@@ -1,5 +1,7 @@
 import "./newExpenseInput.css";
 import { useState } from "react";
+import "../UI/Button.css"
+
 
 export default function ExpenseForm(props) {
   const [enteredTitle, setEnteredTitle] = useState("t");
@@ -65,8 +67,9 @@ export default function ExpenseForm(props) {
           />
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 rounded-lg bg-purple-700 hover:bg-purple-900 duration-300 py-2 px-4">
-        <button type="submit ">Add Expense</button>
+      <div className="absolute bottom-0 right-0">
+        <button className="butt mr-3">Cancel</button>
+        <button type="submit " className="butt">Add Expense</button>
       </div>
     </form>
   );

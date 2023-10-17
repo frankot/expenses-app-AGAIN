@@ -3,7 +3,7 @@ import CardItem from "../UI/CardItem";
 
 export default function ExpensItem(props) {
   return (
-    <CardItem className=" bg-slate-400  p-2 ">
+    <CardItem className=" bg-zinc-500  p-2 ">
       <div className="flex-none mr-10">
         <ExpenseDate date={props.date} />
       </div>  
